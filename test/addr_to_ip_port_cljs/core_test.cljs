@@ -1,8 +1,7 @@
 ;;; This namespace is used for testing purpose. It use the
 ;;; clojurescript.test lib.
 (ns addr-to-ip-port-cljs.core-test
-  (:require-macros [cemerick.cljs.test :as m :refer (deftest testing are is)])
-  (:require [cemerick.cljs.test :as t]
+  (:require [cljs.test :refer-macros [deftest testing are is run-tests]]
             [addr-to-ip-port-cljs.core :as atip :refer (addr-to-ip-port)]))
 
 (deftest addr-to-ip-port-cljs-test

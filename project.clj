@@ -1,4 +1,4 @@
-(defproject addr-to-ip-port-cljs "0.0.1"
+(defproject addr-to-ip-port-cljs "0.0.2"
   :description "addr-to-ip-port ported to cljs for fun and learning"
   :url "https://github.com/rozifus/addr-to-ip-port-cljs"
   :license {:name "MIT License"
@@ -9,28 +9,17 @@
 
   ;; We need to add src/cljs too, because cljsbuild does not add its
   ;; source-paths to the project source-paths
-  :source-paths ["src/clj" "src/cljs"]
-
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2371"]]
-
-  :plugins [[lein-cljsbuild "1.0.3"]]
-
-  :hooks [leiningen.cljsbuild]
-
-  :cljsbuild
-  {:builds {;; This build is only used for including any cljs source
-            ;; in the packaged jar when you issue lein jar command and
-            ;; any other command that depends on it
-            :addr-to-ip-port-cljs
-            {:source-paths ["src/cljs"]
-             ;; The :jar true option is not needed to include the CLJS
-             ;; sources in the packaged jar. This is because we added
-             ;; the CLJS source codebase to the Leiningen
-             ;; :source-paths
-             ;:jar true
-             ;; Compilation Options
-             :compiler
-             {:output-to "dev-resources/public/js/addr_to_ip_port_cljs.js"
-              :optimizations :advanced
-              :pretty-print false}}}})
+  :source-paths ["src" "test"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/clojurescript "1.8.34"]]
+  :plugins [[lein-cljsbuild "1.1.3"]
+            [lein-npm "0.6.1"]
+            [lein-doo "0.1.6"]]
+  :cljsbuild {
+    :builds { 
+        :test {
+          :source-paths ["src" "test"]
+          :compiler {
+            :main 'addr-to-ip-port-cljs.runner
+            :optimizations :none
+            :output-to "target/cljs/unit-test.js" }}}})
