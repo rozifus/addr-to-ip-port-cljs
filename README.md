@@ -12,7 +12,7 @@ lein doo phantom test
 ### Test once
 
 ```bash
-lein doo pahntom test once
+lein doo phantom test once
 ```
 
 
