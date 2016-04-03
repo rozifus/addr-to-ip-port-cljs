@@ -5,6 +5,7 @@
 /checkouts
 /dev-resources/public/js/*
 /out
+/node_modules
 pom.xml
 *.jar
 *.class
@@ -16,4 +17,3 @@ pom.xml
 .lein-repl*
 .crossover-cljs
 .repl
-node_modules
