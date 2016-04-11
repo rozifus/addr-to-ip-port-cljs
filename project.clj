@@ -1,4 +1,4 @@
-(defproject org.clojars.rozifus.webtorrent-cljs/addr-to-ip-port-cljs "0.0.2"
+(defproject org.clojars.rozifus.webtorrent-cljs/addr-to-ip-port-cljs "0.0.3"
   :description "npm 'addr-to-ip-port' ported to ClojureScript for fun and learning"
   :url "https://github.com/rozifus/addr-to-ip-port-cljs"
   :license {:name "MIT License"
