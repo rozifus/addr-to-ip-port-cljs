@@ -1,5 +1,6 @@
 # addr-to-ip-port-cljs
-addr-to-ip-port ported to cljs for fun and learning
+
+npm 'addr-to-ip-port' ported to ClojureScript for fun and learning
 
 ## Testing
 
