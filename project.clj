@@ -6,6 +6,8 @@
             :key "mit"
             :year 2015}
   :min-lein-version "2.3.4"
+  :signing {:gpg-key "rozifus@gmail.com"}
+  :deploy-repositories [["clojars" {:creds :gpg}]]
   :source-paths ["src" "test"]
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.8.34"]]
